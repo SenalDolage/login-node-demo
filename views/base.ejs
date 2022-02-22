@@ -1,0 +1,44 @@
+<%- include('header') -%>
+
+<div class="base">
+  <div class="container">
+    <div class="border p-5">
+      <div class="titles text-center pb-3">
+        <h2 class="font-weight-bold">Login</h2>
+
+        <% if(locals.logoutMessage) { %>
+        <div class="my-3 alert alert-secondary" role="alert">
+            <%= logoutMessage %>
+        </div>
+        <% } %>
+      </div>
+      <form action="/router/login" method="POST" class="form">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="email"
+          />
+          <small id="emailHelp" class="form-text text-muted">
+            We'll never share your email with anyone else.
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('footer') -%>

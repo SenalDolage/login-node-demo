@@ -1,0 +1,15 @@
+<%- include('header') -%>
+
+<div class="dashboard">
+  <div class="container">
+    <div class="border p-5 text-center">
+      <h3 class="h3">Welcome to Dashboard!</h3>
+      <h5 class="h5"><%= locals.user ? user : 'User' %></h5>
+      <div>
+        <a href="/router/logout">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('footer') -%>
